@@ -1,9 +1,8 @@
-package ch1.item2.builder;
+package ch1.item2.builder.hirechical;
 
-import static ch1.item2.builder.NyPizza.Size.*;
-import static ch1.item2.builder.Pizza.Topping.*;
-public class PizzaTest {
-
+import static ch1.item2.builder.hirechical.NyPizza.Size.*;
+import static ch1.item2.builder.hirechical.Pizza.Topping.*;
+public abstract class PizzaTest {
     public static void main(String[] args) {
         NyPizza pizza = new NyPizza.Builder(SMALL)
                 .addTopping(HAM).addTopping(ONION).build();

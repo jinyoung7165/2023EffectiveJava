@@ -1,4 +1,4 @@
-package ch1.item2.builder;
+package ch1.item2.builder.hirechical;
 import java.util.*;
 public abstract class Pizza {
     public enum Topping {HAM, MUSHROOM, ONION};

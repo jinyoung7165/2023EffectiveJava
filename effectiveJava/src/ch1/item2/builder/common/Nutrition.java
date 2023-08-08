@@ -1,6 +1,5 @@
 package ch1.item2.builder.common;
 
-import lombok.Builder;
 import lombok.Data;
 
 @Data
