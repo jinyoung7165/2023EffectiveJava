@@ -1,10 +1,10 @@
-package ch2.item2.builder;
+package ch1.item2.builder.hirechical;
 
 import java.util.Objects;
 
 public class NyPizza extends Pizza {
     public enum Size {SMALL, MEDIUM, LARGE};
-    private final Size size;
+    private final Size size; // 생성자 주입 받을 것
 
     private NyPizza(Builder builder) {
         super(builder); // Pizza Abstract class의 생성자: builder로부터 topping 주입받음
