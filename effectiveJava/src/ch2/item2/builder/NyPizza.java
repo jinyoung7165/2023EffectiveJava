@@ -7,8 +7,8 @@ public class NyPizza extends Pizza {
     private final Size size;
 
     private NyPizza(Builder builder) {
-        super(builder);
-        size = builder.size;
+        super(builder); // Pizza Abstract class의 생성자: builder로부터 topping 주입받음
+        size = builder.size; // builder로부터 size 주입
     }
 
     @Override
@@ -17,20 +17,20 @@ public class NyPizza extends Pizza {
     }
 
     public static class Builder extends Pizza.Builder<Builder> {
+        // 부모의 class 상속하되, return type: 자신(자식 class) -> method chaining 가능
         private final Size size;
         public Builder(Size size) {
             this.size = Objects.requireNonNull(size);
         }
 
         @Override
-        public NyPizza build() {
+        public NyPizza build() { // builder를 주입받아 객체 생성
             return new NyPizza(this);
         }
-
         @Override
         protected Builder self() {
             return this;
-        }
+        } // chaining을 위해 this반환
 
     }
 }
