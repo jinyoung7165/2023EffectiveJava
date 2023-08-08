@@ -1,7 +1,7 @@
-package ch2.item2.builder;
+package ch1.item2.builder;
 
-import static ch2.item2.builder.NyPizza.Size.*;
-import static ch2.item2.builder.Pizza.Topping.*;
+import static ch1.item2.builder.NyPizza.Size.*;
+import static ch1.item2.builder.Pizza.Topping.*;
 public class PizzaTest {
 
     public static void main(String[] args) {

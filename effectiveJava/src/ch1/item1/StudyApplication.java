@@ -1,9 +1,9 @@
-package ch2.item1;
+package ch1.item1;
 
-import ch2.item1.domain.ClassRoom;
-import ch2.item1.domain.Study;
-import ch2.item1.factory.ClassRoomFactory;
-import ch2.item1.factory.StudyFactory;
+import ch1.item1.domain.ClassRoom;
+import ch1.item1.domain.Study;
+import ch1.item1.factory.ClassRoomFactory;
+import ch1.item1.factory.StudyFactory;
 
 import java.rmi.NoSuchObjectException;
 
@@ -13,8 +13,8 @@ public class StudyApplication {
     public static void main(String[] args) throws NoSuchObjectException {
         StudyFactory studyFactory = StudyFactory.getInstance();
         Study study = studyFactory.getStudy("수학", 25);
-
-        ClassRoom classRoom = ClassRoomFactory.getClassRoom(study.getLimit());
+        ClassRoomFactory classRoomFactory = ClassRoomFactory.getInstance();
+        ClassRoom classRoom = classRoomFactory.getClassRoom(study.getLimit());
 
         System.out.println("study = " + study);
         System.out.println("classRoom = " + classRoom.getCapacity());
