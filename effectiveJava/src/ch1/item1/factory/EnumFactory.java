@@ -1,4 +1,4 @@
-package ch2.item3.factory;
+package ch1.item1.factory;
 
 public enum EnumFactory {
     INSTANCE;
