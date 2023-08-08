@@ -3,6 +3,7 @@ package ch1.item3.genericfactory;
 import ch1.item3.genericfactory.functional.ApplyFunction;
 
 public abstract class GenericFactoryTest {
+    private GenericFactoryTest() {}
     public static void main(String[] args) {
         // 함수형 interface type 지정: Integer
         ApplyFunction<Integer> applyFunction = GenericFactory.identityFunction();
