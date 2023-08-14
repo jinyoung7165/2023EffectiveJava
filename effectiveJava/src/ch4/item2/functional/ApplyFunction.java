@@ -1,4 +1,4 @@
-package ch1.item3.genericfactory.functional;
+package ch4.item2.functional;
 
 @FunctionalInterface
 public interface ApplyFunction<T> {

@@ -1,6 +1,6 @@
-package ch1.item3.genericfactory;
+package ch4.item2;
 
-import ch1.item3.genericfactory.functional.ApplyFunction;
+import ch4.item2.functional.ApplyFunction;
 
 public abstract class GenericFactoryTest {
     private GenericFactoryTest() {}
