@@ -31,5 +31,6 @@ public abstract class EnumMapTest {
                 .collect(Collectors.groupingBy(p -> p.lifeCycle,
                         () -> new EnumMap<>(Plant.LifeCycle.class),
                         toSet())));
+        // lifeCycle 기준으로 나눠 list에 담을 것, map 구현체 지정, toSet=Set을 value로 하겠다
     }
 }

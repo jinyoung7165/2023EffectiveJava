@@ -26,7 +26,8 @@ public enum Phase {
                 Stream.of(values()).collect(
                         groupingBy(t -> t.from, () -> new EnumMap<>(Phase.class),
                         toMap(t -> t.to, t -> t, (x, y) -> y, () -> new EnumMap<>(Phase.class))));
-
+                        // from을 기준으로 Transition 원소 묶음, map 구현체 지정, 값 지정: toMap=Map을 VALUE로 하겠다
+                        // VALUE가 될 MAP의 KEY: to, VALUE: Transition자체, mergeFunction: 중복 거름, 특정 map 구현체 지정
         public static Transition from(Phase from, Phase to) {
             return m.get(from).get(to);
         }
